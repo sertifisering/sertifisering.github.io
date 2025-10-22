@@ -6,13 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* --- Modal Style --- */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        padding-top: 80px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 85%;
+        border-radius: 10px;
+      }
+      .caption {
+        margin: auto;
+        color: #ccc;
+        width: 80%;
+        text-align: center;
+        padding: 20px;
+        font-size: 1em;
+      }
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .close:hover { color: #bbb; }
+    </style>
   </head>
   <body class="is-preload">
 
     <!-- Page Wrapper -->
     <div id="page-wrapper">
-
-      <!-- Wrapper -->
       <div id="wrapper">
 
         <!-- Panel (Banner) -->
@@ -31,100 +67,133 @@
           </div>
         </section>
 
-        <!-- Panel (Spotlight) -->
+        <!-- Panel (About) -->
         <section class="panel spotlight medium right" id="first">
           <div class="content span-7">
             <h2 class="major">What I am</h2>
-            <p>I’m adaptable and thrive on problem-solving. Collaboration matters to me, as it brings diverse perspectives and sparks fresh ideas. Traveling keeps me grounded and relaxed, while sharing good food and fun activities with others brings me joy and fulfillment.</p>
+            <p>
+              I focus on understanding client needs and developing systems that deliver real business value.
+              I’m involved in every stage of the process—from system planning and development to deployment—combining technical expertise with practical results.
+              I value collaboration, believing that open communication and teamwork enhance both efficiency and purpose.
+              I’m motivated by challenges, continuously learning, and always eager to explore new technologies rather than staying within what I already know.
+            </p>
           </div>
           <div class="image filtered tinted" data-position="top left">
             <img src="images/pic00002.jpg" alt="" />
           </div>
         </section>
 
-        <!-- Panel (Photo Gallery) -->
-        <section class="panel">
-          <div class="gallery">
-            <a href="images/pic001.jpg" class="image filtered span-2-5" data-position="cen">
-              <img src="images/pic001.jpg" alt="" />
-            </a>
-
-            <div class="group span-2">
-              <a href="images/pic00004.jpg" class="image filtered span-2-5" data-position="top">
-                <img src="images/pic00004.jpg" alt="" />
-              </a>
-              <a href="images/pic00006.jpg" class="image filtered span-2-5" data-position="top">
-                <img src="images/pic00006.jpg" alt="" />
-              </a>
-            </div>
-
-            <a href="images/pic00005.jpg" class="image filtered span-2-5" data-position="top">
-              <img src="images/pic00005.jpg" alt="" />
-            </a>
-
-            <div class="group span-3">
-              <a href="images/pic00003.jpg" class="image filtered span-3" data-position="cen">
-                <img src="images/pic00003.jpg" alt="" />
-              </a>
-              <a href="images/pic00009.jpg" class="image filtered span-1-5" data-position="left">
-                <img src="images/pic00009.jpg" alt="" />
-              </a>
-              <a href="images/pic00010.jpg" class="image filtered span-1-5" data-position="cen">
-                <img src="images/pic00010.jpg" alt="" />
-              </a>
-            </div>
-          </div>
-        </section>
-        
-<!-- Panel (Skills Overview) -->
-<section class="panel color1">
-  <div class="intro span-7" style="overflow:hidden; width:900px;">
-    <h3 class="major">Skills Overview</h3>
-    <p style="font-size:1.1em; line-height:1.6em;">
-      Experienced in full-stack development with <strong>React</strong>, <strong>TypeScript</strong>, <strong>Node.js</strong>, and <strong>Python</strong>.<br>
-      Skilled in designing <strong>RESTful APIs</strong>, <strong>data visualization</strong>, and <strong>automation pipelines</strong> for web-based systems.<br>
-      Hands-on experience deploying <strong>secure CI/CD environments</strong> on both <strong>AWS</strong> and <strong>on-premises servers</strong>.<br>
-      Interested in building scalable, data-driven applications across maritime and industrial domains.
-    </p>
-  </div>
-</section>
-
-<!-- Panel (Projects Text) -->
-<section class="panel">
-  <div class="intro color2" style="overflow:hidden; width:900px;">
-    <h3 class="major">Projects</h3>
-    <p>
-      Click thumbnails to view enlarged images.<br>
-      <ul style="font-size:1.2em; line-height:1.6em; font-weight:500;">
-        <li>Korea Register Vessel Risk Analysis & Tracking System</li>
-        <li>Subsea Cable Installation and Stabilization System</li>
-        <li>Standard Design Platform for Eco-friendly Government Ship</li>
-        <li>Fashion Logistics Processing and Management System</li>
-      </ul>
-    </p>
-  </div>
-</section>
-
-
-        <!-- Panel (Projects Gallery - image popup only) -->
-        <section class="panel">
-          <div class="gallery">
-            <a href="images/project7.png" class="image filtered span-2-5" data-position="top">
-              <img src="images/project7.png" alt="Project 7" />
-            </a>
-            <a href="images/project6.png" class="image filtered span-2-5" data-position="top">
-              <img src="images/project6.png" alt="Project 6" />
-            </a>
-            <a href="images/project5.png" class="image filtered span-2-5" data-position="top">
-              <img src="images/project5.png" alt="Project 5" />
-            </a>
-            <a href="images/project4.png" class="image filtered span-2-5" data-position="top">
-              <img src="images/project4.png" alt="Project 4" />
-            </a>
+        <!-- Panel (Skills) -->
+        <section class="panel color1">
+          <div class="intro span-7" style="overflow:hidden; width:900px;">
+            <h3 class="major">Skills Overview</h3>
+            <p style="font-size:1.1em; line-height:1.6em;">
+              Experienced in full-stack development with <strong>React</strong>, <strong>TypeScript</strong>, <strong>Node.js</strong>, and <strong>Python</strong>.<br>
+              Skilled in designing <strong>RESTful APIs</strong>, <strong>data visualization</strong>, and <strong>automation pipelines</strong> for web-based systems.<br>
+              Hands-on experience deploying <strong>secure CI/CD environments</strong> on both <strong>AWS</strong> and <strong>on-premises servers</strong>.<br>
+              Interested in building scalable, data-driven applications across maritime and industrial domains.
+            </p>
           </div>
         </section>
 
-        <!-- Panel (Contact) -->
+        <!-- Panel (Project 1) -->
+        <section class="panel spotlight left">
+          <div class="image filtered tinted" data-position="center">
+            <img src="images/project1_thumb.png" alt="Subsea Project" onclick="openModal('modal1')" style="cursor:pointer;" />
+          </div>
+          <div class="content span-5">
+            <h3 class="major">Subsea Cable Installation and Stabilization System</h3>
+            <p>
+              Developed web-based interactive sea maps using <strong>React</strong> + <strong>TypeScript</strong>, 
+              integrated regression analysis modules with <strong>Python</strong>, 
+              and automated build, test, and deployment pipelines for geological data processing.
+              <br><br><em>Click the image to view it in full size.</em>
+            </p>
+          </div>
+        </section>
+
+        <div id="modal1" class="modal">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <img class="modal-content" src="images/project1_full.png" alt="Subsea Project" />
+          <div class="caption">
+            <h3>Subsea Cable Installation and Stabilization System</h3>
+            <p>Visualization and analysis platform for subsea burial depth and seabed stability, integrated with regression models and automated data pipelines.</p>
+          </div>
+        </div>
+
+        <!-- Panel (Project 2) -->
+        <section class="panel spotlight right">
+          <div class="image filtered tinted" data-position="center">
+            <img src="images/project2_thumb.png" alt="KR Project" onclick="openModal('modal2')" style="cursor:pointer;" />
+          </div>
+          <div class="content span-5">
+            <h3 class="major">Korea Register Vessel Risk Analysis & Tracking System</h3>
+            <p>
+              Designed RESTful APIs and <strong>PostgreSQL</strong> schema for real-time risk evaluation.
+              Implemented <strong>Bayesian</strong> network algorithms and a visualization dashboard using <strong>React</strong> and <strong>Plotly.js</strong>.
+              <br><br><em>Click the image to view it in full size.</em>
+            </p>
+          </div>
+        </section>
+
+        <div id="modal2" class="modal">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <img class="modal-content" src="images/project2_full.png" alt="KR Project" />
+          <div class="caption">
+            <h3>Vessel Risk Analysis & Tracking System</h3>
+            <p>Web-based platform for real-time vessel monitoring and risk assessment using probabilistic models.</p>
+          </div>
+        </div>
+
+        <!-- Panel (Project 3) -->
+        <section class="panel spotlight left">
+          <div class="image filtered tinted" data-position="center">
+            <img src="images/project3_thumb.png" alt="Design Platform" onclick="openModal('modal3')" style="cursor:pointer;" />
+          </div>
+          <div class="content span-5">
+            <h3 class="major">Standard Design Platform for Eco-friendly Government Ship</h3>
+            <p>
+              Built interactive blueprint management and ship design interface with <strong>Three.js</strong> + <strong>React</strong>.
+              Managed backend logic using <strong>Node.js</strong> and <strong>MySQL</strong>, integrating secure document handling for design data.
+              <br><br><em>Click the image to view it in full size.</em>
+            </p>
+          </div>
+        </section>
+
+        <div id="modal3" class="modal">
+          <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <img class="modal-content" src="images/project3_full.png" alt="Design Platform" />
+          <div class="caption">
+            <h3>Standard Design Platform</h3>
+            <p>Web-based platform supporting ship design standardization and data sharing across departments.</p>
+          </div>
+        </div>
+
+        <!-- Panel (Project 4) -->
+        <section class="panel spotlight right">
+          <div class="image filtered tinted" data-position="center">
+            <img src="images/project4_thumb.png" alt="Fashion Logistics" onclick="openModal('modal4')" style="cursor:pointer;" />
+          </div>
+          <div class="content span-5">
+            <h3 class="major">Fashion Logistics Processing and Management System</h3>
+            <p>
+              Developed warehouse process automation tools and data dashboards for real-time tracking.
+              Implemented <strong>REST API</strong> integration and <strong>React</strong> UI for managing logistics workflows efficiently.
+              <br><br><em>Click the image to view it in full size.</em>
+            </p>
+          </div>
+        </section>
+
+        <div id="modal4" class="modal">
+          <span class="close" onclick="closeModal('modal4')">&times;</span>
+          <img class="modal-content" src="images/project4_full.png" alt="Fashion Logistics" />
+          <div class="caption">
+            <h3>Fashion Logistics System</h3>
+            <p>Data-driven warehouse management and process visualization system enhancing operational efficiency.</p>
+          </div>
+        </div>
+
+        <!-- Contact -->
         <section class="panel color4-alt">
           <div class="intro color4">
             <h2 class="major">Contact</h2>
@@ -135,15 +204,15 @@
               <ul class="contact-icons color1">
                 <li>
                   <img src="images/icon/github.png" style="width:45px; height:45px"/>
-                  <a href="https://github.com/sertifisering" style="margin-left:15px; vertical-align:top">GitHub</a>
+                  <a href="https://github.com/sertifisering" style="margin-left:15px;">GitHub</a>
                 </li>
                 <li>
                   <img src="images/icon/linkedin.png" style="width:45px; height:45px"/>
-                  <a href="https://www.linkedin.com/in/yonggijeong/" style="margin-left:15px; vertical-align:top">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/yonggijeong/" style="margin-left:15px;">LinkedIn</a>
                 </li>
                 <li>
                   <img src="images/icon/outlook.png" style="width:45px; height:45px"/>
-                  <a href="mailto:yonggi_jeong@outlook.com" style="margin-left:15px; vertical-align:top">Email</a>
+                  <a href="mailto:yonggi_jeong@outlook.com" style="margin-left:15px;">Email</a>
                 </li>
               </ul>
             </div>
@@ -159,9 +228,14 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Modal Script -->
+    <script>
+      function openModal(id) {
+        document.getElementById(id).style.display = "block";
+      }
+      function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+    </script>
   </body>
 </html>
-
-
-
-
