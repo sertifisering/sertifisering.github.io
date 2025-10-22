@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
     <style>
       /* --- Modal Style --- */
       .modal {
@@ -43,6 +44,33 @@
         cursor: pointer;
       }
       .close:hover { color: #bbb; }
+
+      /* --- Project Panel Layout --- */
+      .project-panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 60px 0;
+        gap: 50px;
+      }
+      .project-image img {
+        width: 450px;
+        height: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-image img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      }
+      .project-content {
+        max-width: 520px;
+        text-align: left;
+        font-size: 1.05em;
+        line-height: 1.6em;
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -96,47 +124,25 @@
           </div>
         </section>
 
-         <!-- Panel (Project 2) -->
-        <section class="panel spotlight right">
-          <div class="image filtered tinted" data-position="center">
-            <img src="images/project7.png" alt="KR Project" onclick="openModal('modal2')" style="cursor:pointer;" />
-          </div>
-          <div class="content span-5">
-            <h3 class="major">Korea Register Vessel Risk Analysis & Tracking System</h3>
-            <p>
-              Designed RESTful APIs and <strong>PostgreSQL</strong> schema for real-time risk evaluation.
-              Implemented <strong>Bayesian</strong> network algorithms and a visualization dashboard using <strong>React</strong> and <strong>Plotly.js</strong>.
-              <br><br><em>Click the image to view it in full size.</em>
-            </p>
-          </div>
-        </section>
-
-        <div id="modal2" class="modal">
-          <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <img class="modal-content" src="images/project7.png" alt="KR Project" />
-          <div class="caption">
-            <h3>Vessel Risk Analysis & Tracking System</h3>
-            <p>Web-based platform for real-time vessel monitoring and risk assessment using probabilistic models.</p>
-          </div>
-        </div>
-        
-        
         <!-- Panel (Project 1) -->
-        <section class="panel spotlight left">
-          <div class="image filtered tinted" data-position="center">
-            <img src="images/project6.png" alt="Subsea Project" onclick="openModal('modal1')" style="cursor:pointer;" />
-          </div>
-          <div class="content span-5">
-            <h3 class="major">Subsea Cable Installation and Stabilization System</h3>
-            <p>
-              Developed web-based interactive sea maps using <strong>React</strong> + <strong>TypeScript</strong>, 
-              integrated regression analysis modules with <strong>Python</strong>, 
-              and automated build, test, and deployment pipelines for geological data processing.
-              <br><br><em>Click the image to view it in full size.</em>
-            </p>
+        <section class="panel">
+          <div class="project-panel">
+            <div class="project-image">
+              <img src="images/project6.png" alt="Subsea Project" onclick="openModal('modal1')" />
+            </div>
+            <div class="project-content">
+              <h3 class="major">Subsea Cable Installation and Stabilization System</h3>
+              <p>
+                Developed web-based interactive sea maps using <strong>React</strong> + <strong>TypeScript</strong>,
+                integrated regression analysis modules with <strong>Python</strong>, 
+                and automated build, test, and deployment pipelines for geological data processing.<br><br>
+                <em>Click the image to view it in full size.</em>
+              </p>
+            </div>
           </div>
         </section>
 
+        <!-- Modal 1 -->
         <div id="modal1" class="modal">
           <span class="close" onclick="closeModal('modal1')">&times;</span>
           <img class="modal-content" src="images/project6.png" alt="Subsea Project" />
@@ -146,23 +152,51 @@
           </div>
         </div>
 
-     
-
-        <!-- Panel (Project 3) -->
-        <section class="panel spotlight left">
-          <div class="image filtered tinted" data-position="center">
-            <img src="images/project5.png" alt="Design Platform" onclick="openModal('modal3')" style="cursor:pointer;" />
-          </div>
-          <div class="content span-5">
-            <h3 class="major">Standard Design Platform for Eco-friendly Government Ship</h3>
-            <p>
-              Built interactive blueprint management and ship design interface with <strong>Three.js</strong> + <strong>React</strong>.
-              Managed backend logic using <strong>Node.js</strong> and <strong>MySQL</strong>, integrating secure document handling for design data.
-              <br><br><em>Click the image to view it in full size.</em>
-            </p>
+        <!-- Panel (Project 2) -->
+        <section class="panel">
+          <div class="project-panel">
+            <div class="project-image">
+              <img src="images/project7.png" alt="KR Project" onclick="openModal('modal2')" />
+            </div>
+            <div class="project-content">
+              <h3 class="major">Korea Register Vessel Risk Analysis & Tracking System</h3>
+              <p>
+                Designed RESTful APIs and <strong>PostgreSQL</strong> schema for real-time risk evaluation.
+                Implemented <strong>Bayesian</strong> network algorithms and visualization dashboards using <strong>React</strong> and <strong>Plotly.js</strong>.<br><br>
+                <em>Click the image to view it in full size.</em>
+              </p>
+            </div>
           </div>
         </section>
 
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <img class="modal-content" src="images/project7.png" alt="KR Project" />
+          <div class="caption">
+            <h3>Vessel Risk Analysis & Tracking System</h3>
+            <p>Web-based platform for real-time vessel monitoring and risk assessment using probabilistic models.</p>
+          </div>
+        </div>
+
+        <!-- Panel (Project 3) -->
+        <section class="panel">
+          <div class="project-panel">
+            <div class="project-image">
+              <img src="images/project5.png" alt="Design Platform" onclick="openModal('modal3')" />
+            </div>
+            <div class="project-content">
+              <h3 class="major">Standard Design Platform for Eco-friendly Government Ship</h3>
+              <p>
+                Built interactive blueprint management and ship design interface with <strong>Three.js</strong> + <strong>React</strong>.
+                Managed backend logic using <strong>Node.js</strong> and <strong>MySQL</strong>, integrating secure document handling for design data.<br><br>
+                <em>Click the image to view it in full size.</em>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal 3 -->
         <div id="modal3" class="modal">
           <span class="close" onclick="closeModal('modal3')">&times;</span>
           <img class="modal-content" src="images/project5.png" alt="Design Platform" />
@@ -173,20 +207,23 @@
         </div>
 
         <!-- Panel (Project 4) -->
-        <section class="panel spotlight right">
-          <div class="image filtered tinted" data-position="center">
-            <img src="images/project4.png" alt="Fashion Logistics" onclick="openModal('modal4')" style="cursor:pointer;" />
-          </div>
-          <div class="content span-5">
-            <h3 class="major">Fashion Logistics Processing and Management System</h3>
-            <p>
-              Developed warehouse process automation tools and data dashboards for real-time tracking.
-              Implemented <strong>REST API</strong> integration and <strong>React</strong> UI for managing logistics workflows efficiently.
-              <br><br><em>Click the image to view it in full size.</em>
-            </p>
+        <section class="panel">
+          <div class="project-panel">
+            <div class="project-image">
+              <img src="images/project4.png" alt="Fashion Logistics" onclick="openModal('modal4')" />
+            </div>
+            <div class="project-content">
+              <h3 class="major">Fashion Logistics Processing and Management System</h3>
+              <p>
+                Developed warehouse process automation tools and data dashboards for real-time tracking.
+                Implemented <strong>REST API</strong> integration and <strong>React</strong> UI for managing logistics workflows efficiently.<br><br>
+                <em>Click the image to view it in full size.</em>
+              </p>
+            </div>
           </div>
         </section>
 
+        <!-- Modal 4 -->
         <div id="modal4" class="modal">
           <span class="close" onclick="closeModal('modal4')">&times;</span>
           <img class="modal-content" src="images/project4.png" alt="Fashion Logistics" />
@@ -221,7 +258,6 @@
             </div>
           </div>
         </section>
-
       </div>
     </div>
 
@@ -242,5 +278,3 @@
     </script>
   </body>
 </html>
-
-
