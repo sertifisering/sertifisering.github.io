@@ -27,10 +27,10 @@
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        gap: 40px;
-        width: 80%;
+        gap: 50px;
+        width: 90%;                
         margin: auto;
-        max-width: 1100px;
+        max-width: 1400px;       
         color: #ddd;
         text-align: left;
         flex-wrap: nowrap;
@@ -44,7 +44,7 @@
       }
 
       .modal-image img {
-        width: 480px;
+        width: 800px;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0,0,0,0.6);
@@ -52,7 +52,7 @@
 
       .modal-text {
         max-width: 450px;
-        font-size: 1.05em;
+        font-size: 1em;
         line-height: 1.6em;
       }
 
@@ -152,6 +152,40 @@
           </div>
         </section>
 
+        <!-- 2. KR Vessel -->
+        <section class="panel color2">
+          <div class="project-panel" style="width: 1300px;">
+            <div class="project-image">
+              <img src="images/project7.png" alt="KR Project" onclick="openModal('modal2')" />
+            </div>
+            <div class="project-content">
+              <h3 class="major">Korea Register Vessel Risk Analysis & Tracking System</h3>
+              <p>
+                Real-time vessel risk monitoring and Bayesian-based risk evaluation platform.<br><br>
+                <em>Click the image for full details.</em>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div id="modal2" class="modal">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <div class="modal-box">
+            <div class="modal-image">
+              <img src="images/project7.png" alt="KR Project" />
+            </div>
+            <div class="modal-text">
+              <h3>Korea Register Vessel Risk Analysis & Tracking System</h3>
+              <p>
+                A real-time monitoring platform where administrators or vessel accounts can view and customize vessel risk dashboards.  
+                The dashboard displays adjustable risk graphs, while the navigation page provides live vessel data including total risk indicators, key parameters, and position tracking.  
+                The resource section allows users to view or replace Bayesian network models used in analysis.  
+                I handled the full-stack system design, development, and deployment in collaboration with the algorithm team.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <!-- 1. Subsea Cable -->
         <section class="panel color2">
           <div class="project-panel" style="width: 1300px;">
@@ -182,40 +216,6 @@
                 Results appear in an Excel-like spreadsheet viewer for visualization and editing, allowing recalculation based on updated parameters.  
                 The system also visualizes seabed and installation data by depth levels to identify suitable zones.  
                 I designed, developed, and deployed the entire system and collaborated with the algorithm team.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. KR Vessel -->
-        <section class="panel color2">
-          <div class="project-panel" style="width: 1300px;">
-            <div class="project-image">
-              <img src="images/project7.png" alt="KR Project" onclick="openModal('modal2')" />
-            </div>
-            <div class="project-content">
-              <h3 class="major">Korea Register Vessel Risk Analysis & Tracking System</h3>
-              <p>
-                Real-time vessel risk monitoring and Bayesian-based risk evaluation platform.<br><br>
-                <em>Click the image for full details.</em>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <div id="modal2" class="modal">
-          <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <div class="modal-box">
-            <div class="modal-image">
-              <img src="images/project7.png" alt="KR Project" />
-            </div>
-            <div class="modal-text">
-              <h3>Korea Register Vessel Risk Analysis & Tracking System</h3>
-              <p>
-                A real-time monitoring platform where administrators or vessel accounts can view and customize vessel risk dashboards.  
-                The dashboard displays adjustable risk graphs, while the navigation page provides live vessel data including total risk indicators, key parameters, and position tracking.  
-                The resource section allows users to view or replace Bayesian network models used in analysis.  
-                I handled the full-stack system design, development, and deployment in collaboration with the algorithm team.
               </p>
             </div>
           </div>
@@ -334,3 +334,4 @@
     </script>
   </body>
 </html>
+
